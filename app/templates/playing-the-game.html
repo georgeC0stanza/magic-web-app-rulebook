@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="outer">
+        <div class="grid-container">
+            <div class="item1">
+                <div class="inner">
+                    <h2>Setup</h2>
+                    <br>
+                    <ol>
+                        <li><h4>Shuffle</h4>Each player shuffles his or her deck. Each player may then shuffle or cut their opponents’
+                            decks.</li>
+                        <li><h4>Determine turn order</h4>Players determine which player will go first <span style="font-style: italic;">(by flipping a coin, rolling dice, etc.)</span>.</li>
+                        <li><h4>Draw 7 Cards</h4>Each player draws a number of cards equal to their hand size <span style="font-style: italic;">(hand sizes are seven cards unless
+                            otherwise modified)</span>. A player who is dissatisfied with their initial hand may take a mulligan.*</li>
+                        <li><h4>20 Life</h4>Each player starts with 20 life <span style="font-style: italic;">(some game variants may have different starting life totals)</span>
+                            which they are responsible for keeping track of <span style="font-style: italic;">(via dice, pen & paper, etc.)</span>.</li>
+                    </ol>
+                    <br>
+                    <p style="font-size: .8em;">* To take a mulligan, the player first declares that they will take a mulligan. Then he or she
+                        shuffles his or her hand back into their deck and redraws a hand <span style="font-style: italic;">(This process can be
+                        repeated multiple times if desired.)</span>. For each mulligan a player takes, that player must put that many
+                        cards from their hand on the bottom of their deck. In games with 3+ players, players get one free mulligan.</p>
+                    <br>
+                    <h2>Winning</h2>
+                    <br>
+                    <p>A player wins the game when all of their opponents have been eliminated <span style="font-style: italic;">(Though uncommon, it is possible for no one to win.)</span>. A player is eliminated from the game
+                        when either of the following happens:</p>
+                    <ol>
+                        <li>His or her life total is reduced to 0 or below</li>
+                        <li>He or she has to draw a card but cannot because their library has no cards remaining, or</li>
+                        <li>He or she has ten or more poison counters, they lose the game. <span style="font-style: italic;">(A player receives a poison counter for each life lost from a source with infect.)</span></li>
+                    </ol>
+                    <p>Additionally, certain cards may create alternate win or loss conditions that when met can lead to a player either winning or losing a game.</p>
+                    <br>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="inner">
+                    <h2>Turn Structure</h2>
+                    <br>
+                    <p>	Magic is a turn based game. Each turn contains 5 phases, three of which are broken down further into steps. Certain phases require certain turn based actions to be performed such as untapping permanents, drawing a card, etc.</p>
+                    <br>
+                    <div class="subsection">
+                        <h3>Upkeep</h3>
+                        <br>
+                        <p>At the beginning of each turn, the active player untaps his or her permanents and then draws a card. The first player of a two player game skips his or her first draw.</p>
+                        <br>
+                        <br>
+                        <h3>Main Phase</h3>
+                        <br>
+                        <p>The player then enters the Main Phase where he or she is free to cast spells and activate abilities <span style="font-style: italic;">(as many/often as desired assuming the cost is paid)</span>. Any player can react to these spells and abilities by playing instant spells and activating their own abilities. He or she can also play a land <span style="font-style: italic;">(only once per turn)</span> from their hand.</p>
+                        <br>
+                        <br>
+                        <h3>Combat</h3>
+                        <br>
+                        <p>When ready, the active player can enter into the Combat Phase. This phase consists of 3 basic steps: attacking, blocking, and assigning damage. To attack, the active player announces which creatures will attack which players. Then each player getting attacked will declare what creatures they control will block which attacking creatures. <span style="font-style: italic;">(A player can only block those creatures which are specifically attacking them.)</span> After this, all creatures deal damage equal to their power. Blocked creatures deal damage to blocking creatures while they deal damage to the blocked creature. Unblocked creatures deal damage to the defending player. <span style="font-style: italic;">(A creature is put in the graveyard if it is dealt damage equal to or greater than its toughness.)</span></p>
+                        <br>
+                        <br>
+                        <h3>Main Phase</h3>
+                        <br>
+                        <p>After Combat, there is a second Main Phase. This phase is identical to the first Main Phase. <span style="font-style: italic;">(Remember you can only play one land per turn.)</span></p>
+                        <br>
+                        <br>
+                        <h3>End Phase</h3>
+                        <br>
+                        <p>Finally comes the End Phase where all damage is removed from creatures and the active player discards down to 7 cards.</p>
+                        <br>
+                        <br>
+                    </div>
+                    <h2>More Details</h2>
+                    <br>
+                    <p>For more information, see our <a href="https://georgec0stanza.github.io/magicRulebook.io/home.html">Parts of the Turn</a> interactive reminder guide.</p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="item3">
+                <div class="inner">
+                    <br>
+                    <h1>Game Actions</h1>
+                    <br>
+                    <br>
+                    <h2>Tapping and Untapping</h2>
+                    <br>
+                    <p>Tapping a card is to turn it sideways, indicating that it has been used for the turn. Some actions that require tapping:</p>
+                    <ul>
+                        <li>Attacking: Creatures tap then they attack</li>
+                        <li>Add Mana: Lands make mana when you tap them</li>
+                        <li>Activating abilities: Some permanents are tapped as a cost for their activated abilities</li>
+                    </ul>
+                    <br>
+                    <br>
+                    <h2>Casting spells</h2>
+                    <br>
+                    <p></p>
+                    <br>
+                    <br>
+                    <h2>Attacking</h2>
+                    <br>
+                    <p></p>
+                    <br>
+                    <br>
+                    <h2>Blocking</h2>
+                    <br>
+                    <p></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--div class="page-tracker">
+        <span id="prevPage">&lt;</span>&nbsp;&nbsp; * 0 0 0 0 0 &nbsp;&nbsp;<span id="nextPage">&gt;</span>
+    </div>-->
+{% endblock %}

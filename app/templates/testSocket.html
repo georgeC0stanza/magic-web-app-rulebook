@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <!--<script src="/socket.io/socket.io.js"></script>-->
+    <script>
+      var socket = io();
+      socket.on('welcome', function(data) {
+         addMessage(data.message);
+
+         // Respond with a message including this clients' id sent from the server
+         socket.emit('i am client', {data: 'foo!', id: data.id});
+      });
+      socket.on('time', function(data) {
+            addMessage(data.time);
+      });
+      socket.on('error', console.error.bind(console));
+      socket.on('message', console.log.bind(console));
+
+      function addMessage(message) {
+         var text = document.createTextNode(message),
+            el = document.createElement('li'),
+            messages = document.getElementById('messages');
+
+         el.appendChild(text);
+         messages.appendChild(el);
+      }
+      // Listening for event named `any event`
+      socket.on('any event', function(msg) {
+            console.log(msg);
+      });
+   </script>
+       
+  </head>
+  
+  <body>
+   <ul id='messages'></ul> 
+  </body>
+</html>

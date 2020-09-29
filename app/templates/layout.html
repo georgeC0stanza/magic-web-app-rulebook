@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/css/pages.css">
+    <script src="/static/js/main.js" defer=""></script>
+</head>
+
+<body>
+    <header>
+        <div id="home"><a href="/">Home</a></div>
+        <div id="basicConcepts"><a href="/basic-concepts/">Basic Concepts</a></div>
+        <div id="gamePlay"><a href="/playing-the-game/">Gameplay</a></div>
+        <div id="advanced"><a href="/advanced-rules/">Advanced Rules</a></div>
+        <div id="deckBuilding"><a href="/deck-building/">Deck Building</a></div>
+        <div id="glossary"><a href="/glossary/">Glossary</a></div>
+    </header>
+    {% block content %}{% endblock %}
+    <div class="footer">
+        <span id="prevPage">&lt;</span>&nbsp;&nbsp; <span id="page-indicator"># 2 3</span> &nbsp;&nbsp;<span id="nextPage">&gt;</span>
+    </div>
+</body>
+
+</html>
